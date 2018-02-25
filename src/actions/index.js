@@ -10,19 +10,22 @@
 */
 
 
-import * from './actionTypes.';
+import * from './constants/actionTypes.';
 
 /*
   Action creators are functions that create actions. It's easy to conflate the terms “action” and “action creator,” so do your best to use the proper term.
   Action creator functions should be named with simple imperative verb phrases, e.g. updateCreditCard, verifyEmail, uploadDataset, dismissWelcomeModal
   Action creators are always passed into components as props, via the mapDispatchToProps argument of react-redux’s connect(). A typical mapDispatchToProps object simply maps action creators to props of the same name.
-
-  selectBook is an example action creator. It needs to return an action -
-  an object with a type property:
-  export function selectBook(book) {
-  return {
-    type: 'BOOK_SELECTED',
-    payload: book
-  };
-  }
 */
+
+// Returns an action type, UPDATE_FORM and the form being updated
+export const updateForm = (form) => ({
+  type: UPDATE_FORM,
+  payload: form
+});
+
+// Returns an action type, SUBMIT_FORM and the form being submitted
+export const submitForm = (form) => ({
+  type: SUBMIT_FORM,
+  payload: form
+});
