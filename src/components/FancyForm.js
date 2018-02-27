@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Checkbox } from 'semantic-ui-react';
+import { connect } from 'react-redux';
+import { updateForm } from '../actions';
+import { bindActionCreators } from 'redux';
 
 const FancyForm = () => (
   <Form>
@@ -17,4 +20,12 @@ const FancyForm = () => (
   </Form>
 )
 
-export default FancyForm;
+
+//Anything returned from this function will show up as props
+function mapDispatchToProps(dispatch) {
+  //Whenever submitForm is called, the result should be passed to all our
+  //reducers.
+  return bindActionCreators({ updateForm }, dispatch);
+}
+
+export default connect()(FancyForm);

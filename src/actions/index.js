@@ -10,7 +10,7 @@
 */
 
 
-import * from './constants/actionTypes.';
+import * as types from '../constants/actionTypes';
 
 /*
   Action creators are functions that create actions. It's easy to conflate the terms “action” and “action creator,” so do your best to use the proper term.
@@ -20,12 +20,12 @@ import * from './constants/actionTypes.';
 
 // Returns an action type, UPDATE_FORM and the form being updated
 export const updateForm = (form) => ({
-  type: UPDATE_FORM,
+  type: types.UPDATE_FORM,
   payload: form
 });
 
 // Returns an action type, SUBMIT_FORM and the form being submitted
 export const submitForm = (form) => ({
-  type: SUBMIT_FORM,
+  type: types.SUBMIT_FORM,
   payload: form
 });
