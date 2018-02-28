@@ -8,9 +8,9 @@ export default function (state = {
 }, action) {
   switch (action.type) {
     case types.SUBMIT_FORM:
-      return [...state, action.payload];
+      return {...state, ...action.payload};
     case types.UPDATE_FORM:
-      return [...state, action.payload];
+      return {...state, ...action.payload};
     default:
       return state;
   }

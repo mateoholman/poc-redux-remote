@@ -26,7 +26,7 @@ class FancyForm extends Component {
             placeholder='First Name'
             value={this.state.firstName}
             onChange={e => this.setState({ firstName: e.target.value})}
-            onBlur={() => this.props.updateForm(this.state.firstName)}
+            onBlur={() => this.props.updateForm(this.state)}
           />
         </Form.Field>
         <Form.Field>
@@ -35,7 +35,7 @@ class FancyForm extends Component {
             placeholder='Last Name'
             value={this.state.lastName}
             onChange={e => this.setState({ lastName: e.target.value})}
-            onBlur={() => this.props.updateForm(this.state.lastName)}
+            onBlur={() => this.props.updateForm(this.state)}
           />
         </Form.Field>
         <Form.Field>
